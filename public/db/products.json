@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Logitech G430 Stereo Headset",
+    "category": "Headphone",
+    "rate": 5,
+    "price": 349,
+    "imageUrl": "/dist/pictures/products/headphone/Logitech G430 Microphone Headphones.png"
+  },
+  {
+    "id": 2,
+    "name": "Nikon D5600",
+    "category": "Camera",
+    "rate": 5,
+    "price": 239,
+    "imageUrl": "/dist/pictures/products/camera/Nikon-D5600.png"
+  },
+  {
+    "id": 3,
+    "name": "ROG Strix GL502",
+    "category": "laptop",
+    "rate": 5,
+    "price": 1499,
+    "imageUrl": "/dist/pictures/products/laptop/ROG-Strix-GL502.png"
+  },
+  {
+    "id": 4,
+    "name": "Digital-SLR-Sony-Alpha-700",
+    "category": "Camera",
+    "rate": 5,
+    "price": 349,
+    "imageUrl": "/dist/pictures/products/camera/Digital-SLR-Sony-Alpha-700.png"
+  },
+  {
+    "id": 5,
+    "name": "Asus Headphone",
+    "category": "Headphone",
+    "rate": 5,
+    "price": 349,
+    "imageUrl": "/dist/pictures/products/headphone/asus-headphone.png"
+  },
+  {
+    "id": 6,
+    "name": "Apple 15ProMax",
+    "category": "Phone",
+    "rate": 5,
+    "price": 999,
+    "imageUrl": "/dist/pictures/products/phone/iphone-15-pro-max.png"
+  },
+  {
+    "id": 7,
+    "name": "Apple Watch Series 3",
+    "category": "Watch",
+    "rate": 5,
+    "price": 399,
+    "imageUrl": "/dist/pictures/products/smartwatch/Apple-Watch-Series-3.png"
+  },
+  {
+    "id": 8,
+    "name": "A4Tech Gaming Mouse",
+    "category": "Mouse",
+    "rate": 5,
+    "price": 399,
+    "imageUrl": "/dist/pictures/products/mouse/A4Tech-Bloody V5M.png"
+  }
+]

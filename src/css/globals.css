@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .title {
+    @apply font-semibold  text-2xl;
+  }
+  section {
+    @apply mt-4 mb-10 mx-8;
+  }
+}
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera*/
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #9ca3af;
+    border-radius: 100vh;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #4b5563;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  @screen xs {
+    .nav-menu {
+      @apply fixed bg-white h-screen  left-[-100%] top-20 flex-col w-full text-center  ;
+    }
+    .nav-menu.active {
+      @apply left-0 transition-all duration-[0.2s];
+    }
+    .nav-item {
+      @apply my-2.5;
+    }
+  }
+  @screen md {
+    .nav-menu {
+      @apply relative flex flex-row text-center h-fit top-0 left-0 ;
+    }
+    .nav-item {
+      @apply my-0;
+    }
+  }
+  .hamburger {
+    @apply block cursor-pointer;
+  }
+}
