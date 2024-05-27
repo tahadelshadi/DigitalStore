@@ -13,12 +13,12 @@ const FeaturedProducts = async () => {
         <h1 className="title">Featured Products</h1>
         <ViewAllProducts />
       </div>
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 xs:grid-col-1 grid-rows-2  ">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 xs:grid-col-1 grid-rows-2 gap-2 ">
         {products.map((product: any, id: Key) => (
           <Link
             href={`/product/${product.id}`}
             key={id}
-            className="sm:w-80 xs:w-full mx-auto">
+            className="sm:w-80 xs:w-full mx-auto ">
             <div className=" flex flex-col justify-between gap-4 w-full h-full py-4">
               <Image
                 className="mx-auto "

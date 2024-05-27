@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Laptop",
+    "imageUrl": "/dist/pictures/category/laptop.png",
+    "url": "/"
+  },
+  {
+    "name": "Phone",
+    "imageUrl": "/dist/pictures/category/phone.png",
+    "url": "/"
+  },
+  {
+    "name": "Watch",
+    "imageUrl": "/dist/pictures/category/watch.png",
+    "url": "/"
+  },
+  {
+    "name": "Camera",
+    "imageUrl": "/dist/pictures/category/camera.png",
+    "url": "/"
+  },
+  {
+    "name": "Headphone",
+    "imageUrl": "/dist/pictures/category/headphone.png",
+    "url": "/"
+  },
+  {
+    "name": "Video game",
+    "imageUrl": "/dist/pictures/category/controller.png",
+    "url": "/"
+  },
+  {
+    "name": "Mouse",
+    "imageUrl": "/dist/pictures/category/mouse.png",
+    "url": "/"
+  },
+  {
+    "name": "Monitor",
+    "imageUrl": "/dist/pictures/category/monitor.png",
+    "url": "/"
+  }
+]

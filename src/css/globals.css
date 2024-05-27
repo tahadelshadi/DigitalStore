@@ -39,7 +39,7 @@
 
   @screen xs {
     .nav-menu {
-      @apply fixed bg-white h-screen  left-[-100%] top-20 flex-col w-full text-center  ;
+      @apply fixed bg-white dark:bg-gray-800 h-screen  left-[-100%] top-20 flex-col w-full text-center  ;
     }
     .nav-menu.active {
       @apply left-0 transition-all duration-[0.2s];
