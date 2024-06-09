@@ -6,12 +6,12 @@ import TopProduct from "@/components/topProduct/topProduct";
 
 export default async function HomePage() {
   return (
-    <div className="w-full max-w-[1644px] mx-auto">
+    <>
       <TopProduct/>
       <Category />
       <FeaturedProducts />
       <NewArrival />
       <CustomerSupport/>
-    </div>
+    </>
   );
 }

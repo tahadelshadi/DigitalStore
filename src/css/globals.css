@@ -36,7 +36,9 @@
   .text-balance {
     text-wrap: balance;
   }
-
+  .cart-badge{
+    @apply absolute ml-4 mt-2 items-center justify-center flex mx-auto w-4 bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300
+  }
   @screen xs {
     .nav-menu {
       @apply fixed bg-white dark:bg-gray-800 h-screen  left-[-100%] top-20 flex-col w-full text-center  ;
@@ -44,16 +46,10 @@
     .nav-menu.active {
       @apply left-0 transition-all duration-[0.2s];
     }
-    .nav-item {
-      @apply my-2.5;
-    }
   }
   @screen md {
     .nav-menu {
       @apply relative flex flex-row text-center h-fit top-0 left-0 ;
-    }
-    .nav-item {
-      @apply my-0;
     }
   }
   .hamburger {

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ViewAllProducts } from "../buttons/bottons";
-import { getProducts } from "@/utils/api";
-import { FaStar } from "react-icons/fa";
-import { Key } from "react";
+import { fetchProducts } from "@/utils/api";
+import ProductRate from "../productRate/productRate";
+import { Product } from "@/redux/interface/interfaces";
 
 const FeaturedProducts = async () => {
-  const products = await getProducts();
+  const products = await fetchProducts();
   return (
     <section id="featuredProducts">
       <div className="flex flex-row justify-between mb-6 ">
@@ -14,10 +14,10 @@ const FeaturedProducts = async () => {
         <ViewAllProducts />
       </div>
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 xs:grid-col-1 grid-rows-2 gap-2 ">
-        {products.map((product: any, id: Key) => (
+        {products.map((product: Product) => (
           <Link
             href={`/product/${product.id}`}
-            key={id}
+            key={product.id}
             className="sm:w-80 xs:w-full mx-auto ">
             <div className=" flex flex-col justify-between gap-4 w-full h-full py-4">
               <Image
@@ -31,11 +31,7 @@ const FeaturedProducts = async () => {
               <div className="flex flex-col gap-2">
                 <p>{product.name}</p>
                 <div className="flex flex-row">
-                  {Array(product.rate)
-                    .fill(0)
-                    .map((x, idx) => (
-                      <FaStar color="gold" key={idx} size={20} />
-                    ))}
+                  <ProductRate rate={product.rate}/>
                 </div>
                 <div className="font-bold">
                   <span>$</span>
