@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { ShopNow } from "../buttons/bottons";
 import headphone from "../../../public/dist/pictures/products/headphone/headphone.png";
+
 const TopProduct = () => {
   return (
     <div className="md:grid md:grid-cols-2 xs:text w-full lg:px-24 xs:px-8 bg-neutral-100  dark:bg-slate-800 mb-8 ">

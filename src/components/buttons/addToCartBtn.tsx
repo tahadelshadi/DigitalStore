@@ -6,7 +6,7 @@ import {
   decrement,
   increment,
   productQtyInCartSelector,
-} from "@/redux/slices/cartSlice";
+} from "@/redux/cart/cartSlice";
 import { Button } from "./button";
 import { CiTrash } from "react-icons/ci";
 
@@ -30,6 +30,7 @@ const AddToCartBtn = ({ product }: { product: Product }) => {
       <div className="flex flex-row gap-2 justify-center items-center">
         {qty !== 1 ? (
           <Button
+          disabled
             variant="danger"
             className="w-12 h-10"
             onClick={() => dispatch(decrement(product))}>

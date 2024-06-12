@@ -2,8 +2,15 @@ import { CartItem, CartState, Product } from "@/redux/interface/interfaces";
 import { PayloadAction, createSelector, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
+const getFromLocalStorage = (key: string) => {
+  if (!key || typeof window === 'undefined') {
+      return ""
+  }
+  return localStorage.getItem(key)
+}
+
 const initialState: CartState = {
-  cartItems:  [],
+  cartItems: getFromLocalStorage("cart") ? JSON.parse(getFromLocalStorage("cart") || "{}") : [],
   loading: false,
 };
 function saveToStorageCart(cart: CartItem[]) {
@@ -55,7 +62,7 @@ const cartItems = (state: RootState) => state.cart.cartItems;
 export const totalCartItemsSelector = createSelector(
   [cartItems],
   (cartItems) => {
-    cartItems.reduce((total: number, curr: CartItem) => total + curr.qty, 0);
+    return cartItems.reduce((total: number, curr: CartItem) => total + curr.qty, 0);
   }
 );
 export const productQtyInCartSelector = createSelector(
@@ -66,7 +73,7 @@ export const productQtyInCartSelector = createSelector(
 export const totalCartPriceSelector = createSelector(
   [cartItems],
   (cartItems) => {
-    cartItems.reduce(
+    return cartItems.reduce(
       (total: number, curr: CartItem) => total + curr.qty * curr.product.price,
       0
     );

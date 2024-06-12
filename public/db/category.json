@@ -1,42 +1,42 @@
 [
   {
-    "name": "Laptop",
-    "imageUrl": "/dist/pictures/category/laptop.png",
-    "url": "/"
+    "id":1,
+    "name": "laptop",
+    "imageUrl": "/dist/pictures/category/laptop.png"
   },
   {
-    "name": "Phone",
-    "imageUrl": "/dist/pictures/category/phone.png",
-    "url": "/"
+    "id":2,
+    "name": "phone",
+    "imageUrl": "/dist/pictures/category/phone.png"
   },
   {
-    "name": "Watch",
-    "imageUrl": "/dist/pictures/category/watch.png",
-    "url": "/"
+    "id":3,
+    "name": "watch",
+    "imageUrl": "/dist/pictures/category/watch.png"
   },
   {
-    "name": "Camera",
-    "imageUrl": "/dist/pictures/category/camera.png",
-    "url": "/"
+    "id":4,
+    "name": "camera",
+    "imageUrl": "/dist/pictures/category/camera.png"
   },
   {
-    "name": "Headphone",
-    "imageUrl": "/dist/pictures/category/headphone.png",
-    "url": "/"
+    "id":5,
+    "name": "headphone",
+    "imageUrl": "/dist/pictures/category/headphone.png"
   },
   {
-    "name": "Video game",
-    "imageUrl": "/dist/pictures/category/controller.png",
-    "url": "/"
+    "id":6,
+    "name": "video game",
+    "imageUrl": "/dist/pictures/category/controller.png"
   },
   {
-    "name": "Mouse",
-    "imageUrl": "/dist/pictures/category/mouse.png",
-    "url": "/"
+    "id":7,
+    "name": "mouse",
+    "imageUrl": "/dist/pictures/category/mouse.png"
   },
   {
-    "name": "Monitor",
-    "imageUrl": "/dist/pictures/category/monitor.png",
-    "url": "/"
+    "id":8,
+    "name": "monitor",
+    "imageUrl": "/dist/pictures/category/monitor.png"
   }
 ]

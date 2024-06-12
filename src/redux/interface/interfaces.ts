@@ -13,4 +13,10 @@ export interface Product{
     price:number,
     rate:number,
     imageUrl:string,
+    discription:string,
+}
+export interface Category{
+    id:number,
+    name:string,
+    imageUrl:string,
 }

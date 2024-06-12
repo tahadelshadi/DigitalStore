@@ -6,7 +6,7 @@
     @apply font-semibold  text-2xl;
   }
   section {
-    @apply mt-4 mb-10 mx-8;
+    @apply mt-4 mb-10 mx-8 ;
   }
 }
 @layer utilities {

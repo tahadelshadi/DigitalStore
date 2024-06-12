@@ -39,6 +39,8 @@ export interface IButtonProps
   variant?: VariantType;
   square?: boolean;
   paddingLess?: boolean;
+  disabled?:boolean,
+
 }
 export const Button = ({
   className,
@@ -46,6 +48,7 @@ export const Button = ({
   variant,
   square,
   paddingLess,
+  disabled,
   type = "button",
   ...props
 }: IButtonProps) => {
@@ -57,7 +60,8 @@ export const Button = ({
    
           ${getVariant(variant)}  transition duration-500  ${
             !paddingLess && "py-2 px-4"
-          }  ${!square && "rounded-md"} active:scale-95 ${className} `}>
+          }  ${!square && "rounded-md"} active:scale-95 ${className} `}
+          disabled={disabled}>
       {children}
     </button>
   );
