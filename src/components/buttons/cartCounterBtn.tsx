@@ -1,7 +1,7 @@
 "use client";
 
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { Product } from "@/redux/interface/interfaces";
+import { Product } from "@/interface/interfaces";
 import {
   decrement,
   increment,

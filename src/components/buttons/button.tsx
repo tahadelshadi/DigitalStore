@@ -2,6 +2,8 @@ const getVariant = (variant?: VariantType) => {
   switch (variant) {
     case "primary":
       return "bg-violet-500 hover:bg-violet-700  text-white shadow shadow-violet-600/25 hover:shadow-violet-600/75";
+    case "blue":
+      return "bg-blue-500 hover:bg-blue-700  text-white shadow shadow-blue-600/25 hover:shadow-blue-600/75";
     case "danger":
       return "bg-red-500 hover:bg-red-700 text-white  shadow shadow-red-600/25 hover:shadow-red-600/75";
     case "success":
@@ -25,6 +27,7 @@ const getVariant = (variant?: VariantType) => {
 };
 type VariantType =
   | "primary"
+  | "blue"
   | "danger"
   | "success"
   | "warning"
@@ -57,7 +60,6 @@ export const Button = ({
       {...props}
       type={type}
       className={`
-   
           ${getVariant(variant)}  transition duration-500  ${
             !paddingLess && "py-2 px-4"
           }  ${!square && "rounded-md"} active:scale-95 ${className} `}

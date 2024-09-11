@@ -1,6 +1,6 @@
 import ProductCard from "@/components/product/productCard";
-import { Product } from "@/redux/interface/interfaces";
-import { fetchProductByCat } from "@/utils/api";
+import { Product } from "@/interface/interfaces";
+import { fetchProductByCat } from "@/utils/api/product";
 
 const ProductsByCategory = async ({ params }: { params: { slug: string } }) => {
   const productByCat = await fetchProductByCat(params.slug);

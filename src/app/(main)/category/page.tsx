@@ -1,6 +1,7 @@
 import CategoryCard from "@/components/category/categoryCard";
-import { Category as ICategory } from "@/redux/interface/interfaces";
-import { fetchCategory } from "@/utils/api";
+import { Category as ICategory } from "@/interface/interfaces";
+import { fetchCategory } from "@/utils/api/category";
+import { Slider } from "@nextui-org/slider";
 
 const Category = async () => {
   const category = await fetchCategory();

@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import { Product } from "@/redux/interface/interfaces";
+import { Product } from "@/interface/interfaces";
 
 export async function fetchProducts() {
     const file = await fs.readFile(process.cwd() + '/public/db/products.json', 'utf8');
@@ -16,11 +16,7 @@ export async function fetchProductByCat(slug:string) {
     const data = JSON.parse(file);
     return data.filter((item:Product) => item.category.toLowerCase() === slug.toLowerCase())
   }
-export async function fetchCategory() {
-    const file = await fs.readFile(process.cwd() + '/public/db/category.json', 'utf8');
-    const data = JSON.parse(file);
-    return data
-  }
+
   
   export async function getOneProduct(id:string) {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);

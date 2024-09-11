@@ -1,7 +1,7 @@
-import { Product } from "@/redux/interface/interfaces";
-import { fetchProducts } from "@/utils/api";
-import { ViewAllProducts } from "../buttons/bottons";
-import ProductCard from "../product/productCard";
+import { Product } from "@/interface/interfaces";
+import { fetchProducts } from "@/utils/api/product";
+import { ViewAllProducts } from "../../buttons/bottons";
+import ProductCard from "../productCard";
 
 const FeaturedProducts = async () => {
   const products = await fetchProducts();

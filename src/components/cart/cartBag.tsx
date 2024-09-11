@@ -1,5 +1,5 @@
 import { useAppDispatch } from "@/redux/hooks";
-import { CartItem } from "@/redux/interface/interfaces";
+import { CartItem } from "@/interface/interfaces";
 import Image from "next/image";
 import CartCounterBtn from "../buttons/cartCounterBtn";
 import { removeFromCart } from "@/redux/cart/cartSlice";
@@ -14,7 +14,7 @@ const CartBag = ({ cartItems }: { cartItems: CartItem[] }) => {
           key={items.product.id}>
           <Image
             className=""
-            src={items.product.imageUrl}
+            src={`data:image/png;base64,${items.product.images[0]["image"]}`}
             width={200}
             height={100}
             alt={items.product.name}
@@ -24,13 +24,13 @@ const CartBag = ({ cartItems }: { cartItems: CartItem[] }) => {
             <p>{items.product.name}</p>
             <CartCounterBtn product={items.product} />
           </div>
-          <div className="flex flex-col justify-between px-4">
+          <div className="flex flex-col justify-between">
             <button
-              className="text-slate-500"
+              className="text-slate-500 text-right"
               onClick={() => dispatch(removeFromCart(items.product))}>
               Remove
             </button>
-            <p>
+            <p className="text-right">
               <span>&#x24;</span>
               {items.product.price}
             </p>

@@ -1,8 +1,9 @@
 import Category from "@/components/category/category";
 import CustomerSupport from "@/components/customerSupport/customerSupport";
-import FeaturedProducts from "@/components/featuredProducts/featuredProducts";
+import FeaturedProducts from "@/components/product/featuredProducts/featuredProducts";
 import NewArrival from "@/components/newArrival/newArrival";
 import TopProduct from "@/components/topProduct/topProduct";
+import Footer from "@/components/layout/footer";
 
 export default async function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default async function HomePage() {
       <FeaturedProducts />
       <NewArrival />
       <CustomerSupport/>
+      <Footer/>
     </>
   );
 }

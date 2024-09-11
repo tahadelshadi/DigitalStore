@@ -1,4 +1,4 @@
-import { Category } from "@/redux/interface/interfaces";
+import { Category } from "@/interface/interfaces";
 import Image from "next/image";
 import Link from "next/link";
 

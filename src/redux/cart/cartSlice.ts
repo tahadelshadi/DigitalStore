@@ -1,4 +1,4 @@
-import { CartItem, CartState, Product } from "@/redux/interface/interfaces";
+import { CartItem, CartState, Product } from "@/interface/interfaces";
 import { PayloadAction, createSelector, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 

@@ -1,5 +1,5 @@
-import { fetchCategory } from "@/utils/api";
-import { Category as CatInterface } from "@/redux/interface/interfaces";
+import { fetchCategory } from "@/utils/api/category";
+import { Category as CatInterface } from "@/interface/interfaces";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { slideLeft, slideRight } from "../../utils/horizontalScroll";
 import CategoryCard from "./categoryCard";

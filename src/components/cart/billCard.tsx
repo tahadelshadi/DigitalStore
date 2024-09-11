@@ -10,7 +10,7 @@ const BillCard = () => {
       <div className="pb-4">
         <div className="flex flex-row justify-between ">
           <p>
-            Subtotal{" "}
+            Subtotal
             <span className="text-slate-500">
               <span>&#40;</span>
               incl.tax<span>&#41;</span>
@@ -21,7 +21,7 @@ const BillCard = () => {
 
         <div className="flex flex-row justify-between">
           <p>
-            Promocode{" "}
+            Promocode
             <span className="text-slate-500">
               <span>&#40;</span>-{promocode}%<span>&#41;</span>
             </span>
