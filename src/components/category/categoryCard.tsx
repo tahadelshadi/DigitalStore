@@ -2,19 +2,19 @@ import { Category } from "@/interface/interfaces";
 import Image from "next/image";
 import Link from "next/link";
 
-const CategoryCard = ({category}: { category: Category }) => {
+const CategoryCard = ({ category }: { category: Category }) => {
   return (
-    <Link href={`/category/${category.name}`} key={category.id}>
-      <div className="border border-gray-200 dark:border-gray-600 w-40 h-40 flex flex-col gap-4 p-8 justify-center items-center hover:shadow-md hover:shadow-gray-200 dark:hover:shadow-gray-700 hover:scale-[1.1] transition-all ease-in-out ">
+    <Link href={`/products?category=${category.name}`} key={category.id}>
+      <div className="rounded-small flex h-40 w-40 flex-col items-center justify-center gap-4 border border-gray-200 p-8 transition-all ease-in-out hover:scale-[1.1] hover:shadow-md hover:shadow-gray-200 dark:border-gray-600 dark:hover:shadow-gray-700 ">
         <Image
-          className="min-w-[55px] max-h-[55px]:"
-          src={category.imageUrl}
+          className="max-h-[55px]: min-w-[55px]"
+          src={`data:image/png;base64,${category.image}`}
           width={50}
           height={50}
           style={{ objectFit: "contain", aspectRatio: 1 }}
           alt="cctv"
         />
-        <p className="text-center text-sm text-gray-400 font-semibold">
+        <p className="text-center text-sm font-semibold text-gray-400">
           {category.name}
         </p>
       </div>

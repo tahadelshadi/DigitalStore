@@ -8,7 +8,7 @@ import {
 
 const ProductSupport = () => {
   return (
-    <div className="flex flex-row gap-5 justify-between text-gray-600">
+    <div className="flex flex-row gap-5 justify-between text-gray-600 border-y-1 p-5">
       <div className="gap-2 flex flex-row items-center">
         <IoShieldOutline className="w-5 h-5" />
         <p className="font-light text-sm">Guarantee of product authenticity</p>

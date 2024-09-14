@@ -1,25 +1,28 @@
 import Link from "next/link";
+import { Button } from "../buttons/button";
 import { BsArrowRightShort } from "react-icons/bs";
 
 export const ViewAllProducts = () => {
   return (
-    <Link
-      aria-label="View All Products"
-      href={"/products"}
-      className="gap-2 flex flex-row h-fit justify-center items-center bg-blue-700 px-5 py-2.5 rounded-md text-sm text-white">
-      <span>View All Products</span>
-      <BsArrowRightShort size={20} />
+    <Link aria-label="View All Products" href={"/products/headphone"}>
+      <Button
+        className="flex flex-row gap-2 w-fit justify-center items-center text-sm text-white"
+        variant="blue">
+        <p>View All Products</p>
+        <BsArrowRightShort size={20} />
+      </Button>
     </Link>
   );
 };
 export const ShopNow = () => {
   return (
-    <Link
-      aria-label="Shop Now"
-      href={"/products"}
-      className="gap-2 flex flex-row justify-center w-fit items-center bg-blue-700 px-5 py-2.5 rounded-md text-sm text-white">
-      <p>Shop Now</p>
-      <BsArrowRightShort size={20} />
+    <Link aria-label="Shop Now" href={"/products"}>
+      <Button
+        className="flex flex-row gap-2 w-fit justify-center items-center text-sm text-white"
+        variant="blue">
+        <p>Shop Now</p>
+        <BsArrowRightShort size={20} />
+      </Button>
     </Link>
   );
 };

@@ -4,7 +4,7 @@ const Discount = () => {
         className="flex md:flex-row xs:flex-col gap-6 justify-between py-6 "
         id="discounter">
         <div className="flex flex-col gap-4">
-          <p>I have Promocode</p>
+          <p>I Have Promocode: </p>
           <input
             type="text"
             placeholder="sayhello20"

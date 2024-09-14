@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaGoogle } from "react-icons/fa";
-import { RegisterUserApi } from "@/utils/api/auth";
+import { RegisterUserApi } from "@/fetchApi/authApi";
 
 export default function Register() {
   const [email, setEmail] = useState("");

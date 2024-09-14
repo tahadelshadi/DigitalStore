@@ -20,7 +20,7 @@ const AddToCartComponent = ({ product }: { product: Product }) => {
   if (!qty)
     return (
       <div className="items-center">
-        <Button variant="blue" className="w-full"  onClick={() => dispatch(increment(product))}>
+        <Button variant="blue" className="md:w-full"  onClick={() => dispatch(increment(product))}>
           Add to Cart
         </Button>
       </div>

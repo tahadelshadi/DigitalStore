@@ -1,4 +1,4 @@
-import Category from "@/components/category/category";
+import CategorySlider from "@/components/category/categorySlider";
 import CustomerSupport from "@/components/customerSupport/customerSupport";
 import FeaturedProducts from "@/components/product/featuredProducts/featuredProducts";
 import NewArrival from "@/components/newArrival/newArrival";
@@ -9,7 +9,7 @@ export default async function HomePage() {
   return (
     <>
       <TopProduct/>
-      <Category />
+      <CategorySlider />
       <FeaturedProducts />
       <NewArrival />
       <CustomerSupport/>

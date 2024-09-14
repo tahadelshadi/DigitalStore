@@ -1,6 +1,6 @@
 import ProductCard from "@/components/product/productCard";
 import { Product } from "@/interface/interfaces";
-import { fetchProductByCat } from "@/utils/api/product";
+import { fetchProductByCat } from "@/fetchApi/product";
 
 const ProductsByCategory = async ({ params }: { params: { slug: string } }) => {
   const productByCat = await fetchProductByCat(params.slug);

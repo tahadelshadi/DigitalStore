@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaGoogle } from "react-icons/fa";
-import { LoginUserApi } from "@/utils/api/auth";
+import { LoginUserApi } from "@/fetchApi/authApi";
 
 export default function Login() {
   const [email, setEmail] = useState("");

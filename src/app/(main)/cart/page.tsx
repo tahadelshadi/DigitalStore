@@ -10,7 +10,7 @@ const CartComponent = () => {
   const { cartItems } = useAppSelector((state: RootState) => state.cart);
 
     return (
-      <section className="min-h-screen mx-10">
+      <section className="min-h-screen md:mx-10 xs:mx-3">
         <div className="h-4 border-b-2 text-left ">
           <span className="bg-white text-xl pr-5 items-center">
             Shopping Cart
@@ -23,7 +23,7 @@ const CartComponent = () => {
         ) : (
           <>
             <CartBag cartItems={cartItems} />
-            <div className="flex flex-row justify-between mt-6">
+            <div className="flex md:flex-row xs:flex-col justify-between mt-6">
               <Discount />
               <BillCard />
             </div>

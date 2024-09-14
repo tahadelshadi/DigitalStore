@@ -31,11 +31,17 @@ export interface Product {
 
 export interface Image {
   id: number;
-  image: string;
+  formatted_image: string;
 }
 
 export interface Category {
   id: number;
   name: string;
-  imageUrl: string;
+  image: string;
+}
+export interface FetchProductsParams {
+  minPrice?: number;
+  maxPrice?: number;
+  ordering?: string;
+  category?: string;
 }

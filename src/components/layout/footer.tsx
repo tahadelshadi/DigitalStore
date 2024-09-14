@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-white dark:bg-slate-800 px-4 lg:px-8 mx-auto">
+      <footer className="bg-white dark:bg-slate-800 xs:px-4 lg:px-8 md:mx-auto">
         <div className=" max-w-[1644px] space-y-8 py-16 lg:space-y-16">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
@@ -28,56 +28,31 @@ const Footer = () => {
                 non cupiditate quae nam molestias.
               </p>
 
-              <ul className="mt-5 flex gap-2">
-                <li>
-                  <Link
-                    href="#"
-                    rel="noreferrer"
-                    target="_blank"
-                    className="text-gray-700 dark:text-gray-400 transition hover:opacity-75">
-                    <span className="sr-only">Facebook</span>
-                  </Link>
-                </li>
+              <div className="mt-5 flex flex-row gap-2">
+                <Link
+                  href="#"
+                  className="text-gray-700 dark:text-gray-400 transition hover:opacity-75">
+                  <span className="sr-only">Instagram</span>
+                  <FaInstagram size={20} />
+                </Link>
 
-                <li>
-                  <Link
-                    href="#"
-                    rel="noreferrer"
-                    target="_blank"
-                    className="text-gray-700 dark:text-gray-400 transition hover:opacity-75">
-                    <span className="sr-only">Instagram</span>
+                <Link
+                  href="#"
+                  className="text-gray-700 dark:text-gray-400 transition hover:opacity-75">
+                  <span className="sr-only">Twitter</span>
+                  <FaXTwitter size={20} />
+                </Link>
 
-                    <FaInstagram size={20} />
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    rel="noreferrer"
-                    target="_blank"
-                    className="text-gray-700 dark:text-gray-400 transition hover:opacity-75">
-                    <span className="sr-only">Twitter</span>
-
-                    <FaXTwitter size={20} />
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    rel="noreferrer"
-                    target="_blank"
-                    className="text-gray-700 dark:text-gray-400 transition hover:opacity-75">
-                    <span className="sr-only">GitHub</span>
-
-                    <FaGithub size={20} />
-                  </Link>
-                </li>
-              </ul>
+                <Link
+                  href="#"
+                  className="text-gray-700 dark:text-gray-400 transition hover:opacity-75">
+                  <span className="sr-only">GitHub</span>
+                  <FaGithub size={20} />
+                </Link>
+              </div>
             </div>
 
-            <div className="grid xs:grid-cols-1 gap-8 sm:grid-cols-3 lg:col-span-2">
+            <div className="grid xs:grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-2">
               <div>
                 <p className="font-medium text-gray-900 dark:text-white">
                   Get to Know Us
