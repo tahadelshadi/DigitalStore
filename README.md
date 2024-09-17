@@ -8,7 +8,6 @@
 
 # Mobile:
 
-![5](public/dist/screenshots/5.jpeg "Optional Title")
 ![4](public/dist/screenshots/4.jpeg "Optional Title")
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
