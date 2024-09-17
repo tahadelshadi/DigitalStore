@@ -1,3 +1,16 @@
+## Preview:
+
+# Desktop:
+
+![1](public/dist/screenshots/1.jpeg "Optional Title")
+![2](public/dist/screenshots/2.jpeg "Optional Title")
+![3](public/dist/screenshots/3.jpeg "Optional Title")
+
+# Mobile:
+
+![5](public/dist/screenshots/5.jpeg "Optional Title")
+![4](public/dist/screenshots/4.jpeg "Optional Title")
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
