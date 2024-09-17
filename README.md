@@ -1,12 +1,12 @@
-## Preview:
+# Preview:
 
-# Desktop:
+### Desktop:
 
 ![1](public/dist/screenshots/1.jpeg)
 ![2](public/dist/screenshots/2.jpeg)
 ![3](public/dist/screenshots/3.jpeg)
 
-# Mobile:
+### Mobile:
 
 ![5](public/dist/screenshots/5.jpeg)
 
