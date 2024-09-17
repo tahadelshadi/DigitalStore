@@ -27,6 +27,14 @@ export interface Product {
   images: Image[];
   description: string;
   stock: Number;
+  comment: Comment[];
+}
+
+export interface Comment {
+  user: string;
+  context: string;
+  rate: number;
+  created_at: Date;
 }
 
 export interface Image {

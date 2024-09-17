@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ShopNow, ViewAllProducts } from "../buttons/bottons";
-import s24 from "../../../public/dist/pictures/products/phone/Samsung-Galaxy-S24-Ultra-Violet.png";
+import s24 from "../../../public/dist/pictures/products/phone/Samsung-Galaxy-S24-Ultra-Violet-PNG.png";
 import Link from "next/link";
 
 const NewArrival = () => {
@@ -31,11 +31,11 @@ const NewArrival = () => {
         </div>
         {Array(3)
           .fill(0)
-          .map((x, idx) => (
+          .map((x, id) => (
             <Link
               className="col-span-4 flex flex-row border border-gray-200 dark:border-none dark:bg-gray-700 p-4  gap-8"
               href={"/"}
-              key={idx}>
+              key={id}>
               <div className="items-center border border-gray-200 dark:border-none">
                 <Image
                   className=""

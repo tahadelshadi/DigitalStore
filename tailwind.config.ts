@@ -15,6 +15,7 @@ const config: Config = {
       sm: "640px",
       md: "768px",
       lg: "1024px",
+      'lg-only': { 'min': '1024px', 'max': '1279px' },
       xl: "1280px",
     },
     extend: {

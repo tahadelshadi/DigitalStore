@@ -1,6 +1,6 @@
 import { useAppSelector } from "@/redux/hooks";
-import { Button } from "../buttons/button";
 import { totalCartPriceSelector } from "@/redux/cart/cartSlice";
+import { Button } from "@nextui-org/react";
 
 const BillCard = () => {
   const totalPrice = useAppSelector(totalCartPriceSelector);
@@ -34,7 +34,10 @@ const BillCard = () => {
         <p>TOTAL</p>
         <p>{totalPrice - promocode}</p>
       </div>
-      <Button>Proceed To Checkout</Button>
+      <Button
+        color="primary"
+        variant="solid"
+        className="my-2.5">Proceed To Checkout</Button>
     </div>
   );
 };

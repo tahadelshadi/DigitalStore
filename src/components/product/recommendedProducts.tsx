@@ -1,18 +1,16 @@
 import ProductDetailTitle from "@/components/title/productDetailTitle";
-import ProductCard from "./productCard";
 import { RecommendedProductApi } from "@/fetchApi/productApi";
 import { Product } from "@/interface/interfaces";
+import RecommendedCard from "./recommendedCard";
 
-const RecommendedProducts = async (category: { category: string }) => {
-  const products: Product[] = await RecommendedProductApi(category);
+const RecommendedProducts = async () => {
+  const products: Product[] = await RecommendedProductApi();
   return (
-    <div>
+    <div className="my-8 ">
       <ProductDetailTitle title={"Recommended Products For You"} />
-      <div className="flex flex-row">
+      <div className="flex flex-row border rounded-md p-2 divide-x-1 overflow-clip">
         {products.map((product) => (
-          <>
-            <ProductCard product={product} key={product.id} />
-          </>
+            <RecommendedCard product={product} key={product.id} />
         ))}
       </div>
     </div>

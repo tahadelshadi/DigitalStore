@@ -8,9 +8,11 @@ import Title from "@/components/title/title";
 import Sort from "@/components/sort/sort";
 import ProductCard from "@/components/product/productCard";
 import FilterSidebar from "@/components/filter/filterSidebar";
+import { Card } from "@nextui-org/react";
 
 const Products = () => {
   const router = useRouter();
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const searchParams = useSearchParams();
   const [category, setcategory] = useState<string>(
     searchParams.get("category") || ""
@@ -50,10 +52,11 @@ const Products = () => {
       setProducts(data);
     };
     fetchSortedProducts();
+    setIsLoaded(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
-  if (!products) return <>loading...</>;
+  // if (!loading) return <CardSkeleton />;
   return (
     <section>
       <Title title="Products" />
@@ -64,9 +67,11 @@ const Products = () => {
           handleSliderChangeEnd={handleSliderChangeEnd}></FilterSidebar>
         <div className="xs:w-full">
           <Sort setOrdering={setOrdering} />
-          <div className="xs:grid-col-1 grid grid-rows-2 xs:divide-y-1 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="xs:grid-col-1 grid-rows-auto grid sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 ">
             {products.map((product: Product) => (
-              <ProductCard product={product} key={product.id} />
+              <div className="card-divide" key={product.id}>
+                <ProductCard product={product}  />
+              </div>
             ))}
           </div>
         </div>
@@ -77,7 +82,7 @@ const Products = () => {
 
 export default function ProductsPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Card />}>
       <Products />
     </Suspense>
   );

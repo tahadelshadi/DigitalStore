@@ -67,12 +67,8 @@ export async function ProductListApi({
   return await response.json();
 }
 
-export async function RecommendedProductApi({
-  category,
-}: {
-  category: string;
-}) {
-  const response = await fetch(`${server}/api/products/recommend/${category}`, {
+export async function RecommendedProductApi() {
+  const response = await fetch(`${server}/api/products/recommend/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

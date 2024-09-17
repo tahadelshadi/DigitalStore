@@ -7,13 +7,15 @@ const FeaturedProducts = async () => {
   const products = await FeaturedProductApi();
   return (
     <section id="featuredProducts">
-      <div className="flex flex-row justify-between mb-6 ">
+      <div className="mb-6 flex flex-row justify-between ">
         <h1 className="title">Featured Products</h1>
         <ViewAllProducts />
       </div>
-      <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-col-1 grid-rows-2 gap-2 ">
-        {products.map((product: Product) => (
-          <ProductCard product={product} key={product.id} />
+      <div className="gap-5 xs:grid-col-1 grid-rows-auto grid rounded-medium sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4">
+        {products.slice(0, 6).map((product: Product) => (
+          <div className="border rounded-medium" key={product.id}>
+            <ProductCard product={product} />
+          </div>
         ))}
       </div>
     </section>

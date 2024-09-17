@@ -1,12 +1,21 @@
 import { FaStar } from "react-icons/fa";
 
-function ProductRate({ rate }: { rate: Number }) {
+export const ProductRate=({ rate }: { rate: number })=> {
   return (
-    <div className="flex flex-row gap-2 items-center">
+    <div className="flex flex-row items-center gap-2">
       <FaStar color="gold" size={20} />
       <>{rate}</>
     </div>
   );
 }
-
-export default ProductRate;
+export const CommentRate=({ rate }: { rate: number })=> {
+  return (
+    <div className="flex flex-row items-center gap-2">
+      {Array(parseInt(rate))
+        .fill(null)
+        .map((_, id) => (
+          <FaStar key={id} color="gold" size={15} />
+        ))}
+    </div>
+  );
+}

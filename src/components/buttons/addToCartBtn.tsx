@@ -20,7 +20,10 @@ const AddToCartComponent = ({ product }: { product: Product }) => {
   if (!qty)
     return (
       <div className="items-center">
-        <Button variant="blue" className="md:w-full"  onClick={() => dispatch(increment(product))}>
+        <Button
+          variant="blue"
+          className="md:w-full"
+          onClick={() => dispatch(increment(product))}>
           Add to Cart
         </Button>
       </div>
@@ -28,26 +31,17 @@ const AddToCartComponent = ({ product }: { product: Product }) => {
 
   return (
     <>
-      <div className="flex flex-row gap-2 items-center justify-center">
-        {qty !== 1 ? (
-          <Button
-            variant="danger"
-            className="w-12 h-10"
-            onClick={() => dispatch(decrement(product))}>
-            -
-          </Button>
-        ) : (
-          <Button
-            variant="danger"
-            className="flex justify-center items-center w-12 h-10 "
-            onClick={() => dispatch(decrement(product))}>
-            <CiTrash size={24} />
-          </Button>
-        )}
+      <div className="flex flex-row items-center justify-center gap-2">
+        <Button
+          variant="danger"
+          className="flex h-10 w-12 items-center justify-center"
+          onClick={() => dispatch(decrement(product))}>
+          -
+        </Button>
         <div className="w-[30px] text-center">{qty}</div>
         <Button
           variant="success"
-          className="w-12 h-10"
+          className="flex h-10 w-12 items-center justify-center"
           onClick={() => dispatch(increment(product))}>
           +
         </Button>

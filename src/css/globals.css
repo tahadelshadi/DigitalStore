@@ -8,8 +8,18 @@
   section {
     @apply mt-4 md:mb-10 xs:mb-20 md:px-8 xs:px-3;
   }
+  .card-divide{
+    @apply 
+    xs:border-b-1
+    sm:odd:border-r-1 sm:border-b-1  lg-only:[&:nth-child(3n)]:border-r-0
+    lg:even:border-r-1 lg:border-b-1 xl:[&:nth-child(4n)]:border-r-0 
+  }
 }
 @layer utilities {
+  .noscrollbar{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
   
   .scrollbar::-webkit-scrollbar {
     width: 8px;

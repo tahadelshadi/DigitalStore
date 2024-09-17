@@ -37,18 +37,25 @@ const CategoryDropdownMenu = () => {
       name: "monitor",
     },
   ];
+  const sortedCategory = category.sort((a: any, b: any) => {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  });
+
   return (
     <Dropdown>
       <DropdownTrigger>
-        <div className="flex flex-row gap-1 items-center cursor-pointer">
-          <Bars3Icon
-            aria-label="Hamburger Menu button"
-            className="w-5 h-5"
-          />
+        <div className="flex cursor-pointer flex-row items-center gap-1">
+          <Bars3Icon aria-label="Hamburger Menu button" className="h-5 w-5" />
           <p>Category</p>
         </div>
       </DropdownTrigger>
-      <DropdownMenu aria-label="Dynamic Actions" items={category}>
+      <DropdownMenu aria-label="Dynamic Actions" items={sortedCategory}>
         {(category) => (
           <DropdownItem
             href={`/products?category=${category.name}`}

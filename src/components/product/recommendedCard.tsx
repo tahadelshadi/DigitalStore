@@ -3,14 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ProductRate } from "./productRate";
 
-const ProductCard = ({ product }: { product: Product }) => {
+const RecommendedCard = ({ product }: { product: Product }) => {
   return (
-    <div className="mx-auto flex h-full w-full flex-col justify-between gap-4  xs:w-full xs:divide-x-1 xs:py-2 sm:p-5">
+    <div className="mx-auto  flex h-full w-full min-w-[300px] flex-col justify-between gap-4 xs:p-5 ">
       <Link
-        className="flex gap-4 xs:flex-row sm:flex-col"
+        className="flex gap-4 flex-col"
         href={`/products/${product.id}`}>
         <Image
-          className="mx-auto xs:h-40 xs:w-40  object-contain aspect-square"
+          className="mx-auto xs:h-40 xs:w-40  object-contain aspect-square "
           src={`data:image/png;base64,${product.images[0]["formatted_image"]}`}
           width={200}
           height={200}
@@ -33,4 +33,4 @@ const ProductCard = ({ product }: { product: Product }) => {
   );
 };
 
-export default ProductCard;
+export default RecommendedCard;
