@@ -2,13 +2,13 @@
 
 # Desktop:
 
-![1](public/dist/screenshots/1.jpeg "Optional Title")
-![2](public/dist/screenshots/2.jpeg "Optional Title")
-![3](public/dist/screenshots/3.jpeg "Optional Title")
+![1](public/dist/screenshots/1.jpeg)
+![2](public/dist/screenshots/2.jpeg)
+![3](public/dist/screenshots/3.jpeg)
 
 # Mobile:
 
-![4](public/dist/screenshots/4.jpeg "Optional Title")
+![5](public/dist/screenshots/5.jpeg)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
